@@ -46,7 +46,7 @@ esac
 
 # Check wget
 if [ -e '/usr/bin/wget' ]; then
-    wget http://vestacp.com/pub/vst-install-$type.sh -O vst-install-$type.sh
+    wget https://raw.githubusercontent.com/kiairohman/vestacp/master/install/vst-install-$type.sh -O vst-install-$type.sh
     if [ "$?" -eq '0' ]; then
         bash vst-install-$type.sh $*
         exit
@@ -58,7 +58,7 @@ fi
 
 # Check curl
 if [ -e '/usr/bin/curl' ]; then
-    curl -O http://vestacp.com/pub/vst-install-$type.sh
+    curl -O https://raw.githubusercontent.com/kiairohman/vestacp/master/install/vst-install-$type.sh
     if [ "$?" -eq '0' ]; then
         bash vst-install-$type.sh $*
         exit
